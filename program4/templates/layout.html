@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+  <title>{% block title %} Program 4 default title {% endblock %}</title>
+  <style>
+    body {
+      background-color: rgb(202, 186, 216);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: aquamarine;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(238, 238, 238);
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    a {
+      text-decoration: none;
+      color: rgb(50, 50, 50);
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    #links {
+      display: flex;
+      gap: 10px;
+      background-color: rgb(198, 151, 117);
+      padding: 10px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div>
+      <a href="home">DEV SITE</a>
+    </div>
+    <div id="links">
+      <a href="home">Home</a> 
+      <a href="about">About</a> 
+      <a href="contact">Contact Us</a> 
+    </div>
+  </nav>
+
+  {% block content %}{% endblock %}
+
+  <footer>
+    <center>&copy ayshmnmm 2024</center>
+  </footer>
+</body>
