@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'program4',
     'program5',
     'scratch',
-    'scratch2'
+    'scratch2',
+    'scratch3',
 ]
 
 MIDDLEWARE = [

@@ -10,4 +10,5 @@ class Student(models.Model):
     USN = models.CharField(max_length=10)
     name = models.CharField(max_length=100)
     sem = models.IntegerField()
+    course = models.ManyToManyField(Course)
     
