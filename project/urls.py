@@ -25,5 +25,6 @@ urlpatterns = [
     path('', include('program3.urls')),
     path('', include('program4.urls')),
     path('', include('program5.urls')),
+    path('p6/', include('program6.urls')),
     path('', include('scratch.urls')),
 ]
