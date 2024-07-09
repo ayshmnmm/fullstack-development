@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'program5',
     'program6',
     'program7',
+    'program8',
     'scratch',
     'scratch2',
     'scratch3',

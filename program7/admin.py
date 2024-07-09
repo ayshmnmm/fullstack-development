@@ -11,7 +11,8 @@ class StudentAdmin(admin.ModelAdmin):
 
 class CourseAdmin(admin.ModelAdmin):
     list_display = ('cid', 'cname')
-    search_fields = ['cname']
+    search_fields = ['cname', 'cid']
+    ordering = ['cname']
 
 admin.site.register(Student, StudentAdmin)
 admin.site.register(Course, CourseAdmin)
