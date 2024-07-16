@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import Student,Course
+from .models import Student
 
 # Create your views here.
 class StudentListView(generic.ListView):
@@ -10,4 +10,3 @@ class StudentListView(generic.ListView):
 class StudentDetailView(generic.DetailView):
     model=Student
     template_name="student_detail.html"
-    

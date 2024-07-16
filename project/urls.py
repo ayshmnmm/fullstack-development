@@ -32,4 +32,5 @@ urlpatterns = [
     path('p8/', include('program8.urls')),
     path('p9/', include('program9.urls')),
     path('p10/', include('program10.urls')),
+    path('p11/', include('program11.urls')),
 ]
