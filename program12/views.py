@@ -14,7 +14,7 @@ def courselist(request):
                 ans=ans+x['cname']+'<br>'
             return HttpResponse(ans)
         except Exception:
-            return HttpResponse('STUDENT USN DOENT EXIST/INVALID')
+            return HttpResponse('STUDENT USN DOES NOT EXIST/INVALID')
     else:
         return HttpResponse("method is not post")
 
