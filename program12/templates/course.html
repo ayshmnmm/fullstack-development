@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <body>
+        <h1>Student Course Enrollment Details</h1>
+        <div id="message"></div>
+        <form id="courseenroll" method="POST">
+            {% csrf_token %}
+            <label>enter student usn </label>
+            <input type="text" id="usn" />
+            <button type="submit">check</button>
+        </form>
+        <p id="ans"></p>
+    </body>
+    <title>Student Course enrolled details</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#courseenroll").on("submit", function (event) {
+                event.preventDefault();
+
+                $.ajax({
+                    url: '{% url "courselist" %}',
+                    type: "POST",
+                    data: {
+                        usn: $(usn).val(),
+                        csrfmiddlewaretoken: $(
+                            "input[name=csrfmiddlewaretoken]",
+                        ).val(),
+                    },
+                    success: function (data) {
+                        $("#ans").html(data);
+                    },
+                    error: function (error) {
+                        $("#message").html(
+                            "<p>An error occurred. Please try again.</p>",
+                        );
+                    },
+                });
+            });
+        });
+    </script>
+</html>
